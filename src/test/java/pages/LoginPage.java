@@ -10,7 +10,7 @@ public class LoginPage {
 
     private WebDriver driver;
 
-    @FindBy(xpath = "//input[@formcontrolname='username']")
+    @FindBy(xpath = "//input[@placeholder='Enter Your Username']")
     private WebElement usernameInput;
 
     @FindBy(xpath = "//input[@id='Password']")
@@ -45,55 +45,46 @@ public class LoginPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void waitForLoginElements() throws InterruptedException {
-        Thread.sleep(500);
+    public void waitForLoginElements() {
         TestUtils.isVisible(driver, usernameInput);
         TestUtils.isVisible(driver, passwordInput);
         TestUtils.isVisible(driver, loginButton);
     }
 
-    public void enterUsername(String username) throws InterruptedException {
-        Thread.sleep(5000);
+    public void enterUsername(String username) {
         TestUtils.waitForVisibility(driver, usernameInput).clear();
         TestUtils.waitForVisibility(driver, usernameInput).sendKeys(username);
     }
 
-    public void enterPassword(String password) throws InterruptedException {
-        Thread.sleep(5000);
+    public void enterPassword(String password) {
         TestUtils.waitForVisibility(driver, passwordInput).clear();
         TestUtils.waitForVisibility(driver, passwordInput).sendKeys(password);
     }
 
-    public void clickLogin() throws InterruptedException {
-        Thread.sleep(5000);
+    public void clickLogin() {
         TestUtils.waitForElementToBeClickable(driver, loginButton).click();
     }
 
-    public boolean isErrorMessageDisplayed() throws InterruptedException {
-        Thread.sleep(500);
+    public boolean isErrorMessageDisplayed() {
         return TestUtils.isVisible(driver, errorMessageToaster);
     }
 
-    public void performLogin(String username, String password) throws InterruptedException {
+    public void performLogin(String username, String password) {
         enterUsername(username);
         enterPassword(password);
         clickLogin();
     }
 
-    public void clickForgotPassword() throws InterruptedException {
-        Thread.sleep(5000);
+    public void clickForgotPassword() {
         TestUtils.waitForElementToBeClickable(driver, forgotPasswordLink).click();
     }
 
-    public void enterForgotUsername(String username) throws InterruptedException {
-        Thread.sleep(5000);
-
+    public void enterForgotUsername(String username) {
         TestUtils.waitForVisibility(driver, forgotUsernameInput).clear();
         TestUtils.waitForVisibility(driver, forgotUsernameInput).sendKeys(username);
     }
 
-    public void clickSendButton() throws InterruptedException {
-        Thread.sleep(5000);
+    public void clickSendButton() {
         TestUtils.waitForElementToBeClickable(driver, sendButton).click();
     }
 
@@ -105,8 +96,7 @@ public class LoginPage {
         return TestUtils.isVisible(driver, forgotPasswordLink_1);
     }
 
-    public void clickInstagramIcon() throws InterruptedException {
-        Thread.sleep(5000);
+    public void clickInstagramIcon() {
         TestUtils.waitForVisibility(driver, instagramIcon);
         TestUtils.waitForElementToBeClickable(driver, instagramIcon).click();
     }

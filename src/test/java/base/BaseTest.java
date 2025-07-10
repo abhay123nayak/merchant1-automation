@@ -20,26 +20,29 @@ public class BaseTest {
     }
 
     @BeforeMethod
-    public void setUp() {
+    public void setUp() throws InterruptedException {
         ChromeOptions options = new ChromeOptions();
+
+        // Common options for all platforms
+        options.addArguments("--disable-gpu");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
 
         String os = System.getProperty("os.name").toLowerCase();
 
-        if (os.contains("linux")) {
-            // For GitHub Actions (Ubuntu runners)
-            options.addArguments("--headless");
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--disable-gpu");
+        if (os.contains("win")) {
+            // Windows 11 or any Windows OS
+            options.addArguments("--start-maximized");
+        } else {
+            // Linux (GitHub Actions etc.)
+            options.addArguments("--headless=new");  // Use headless=new for Chrome 109+
             options.addArguments("--window-size=1920,1080");
             options.addArguments("--user-data-dir=/tmp/chrome-user-data");
-        } else {
-            // For Windows 11 (your local machine)
-            options.addArguments("--start-maximized");
         }
 
         driver = new ChromeDriver(options);
         driver.get("https://merchant1.uatdev.in/auth/login");
+        Thread.sleep(10);
     }
 
     @AfterMethod

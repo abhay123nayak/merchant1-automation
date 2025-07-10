@@ -1,4 +1,4 @@
-name: Selenium Tests CI
+name: Selenium Tests CI on Windows
 
 on:
   push:
@@ -8,8 +8,7 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       # Step 1: Checkout code
@@ -20,16 +19,21 @@ jobs:
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
           distribution: 'adopt'
+          java-version: '17'
 
-      # Step 3: Install Google Chrome
-      - name: Install Google Chrome
-        run: |
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo apt install ./google-chrome-stable_current_amd64.deb
+      # Step 3: Set up Chrome Browser (already installed on Windows runners)
 
-      # Step 4: Cache Maven dependencies
+      - name: Check Chrome version
+        run: chrome --version
+
+      # Step 4: Set up ChromeDriver (matches Chrome version automatically)
+      - name: Setup ChromeDriver
+        uses: nanasess/setup-chromedriver@v2
+        with:
+          version: latest
+
+      # Step 5: Cache Maven dependencies
       - name: Cache Maven repository
         uses: actions/cache@v4
         with:
@@ -38,11 +42,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven
 
-      # Step 5: Run Selenium Tests with Maven
-      - name: Run Selenium Maven Tests
+      # Step 6: Run Selenium Tests
+      - name: Run Maven Selenium Tests
         run: mvn clean install
 
-      # Step 6: Upload Extent Report as GitHub Artifact
+      # Step 7: Upload Extent Report
       - name: Upload Extent HTML Report
         uses: actions/upload-artifact@v4
         with:
