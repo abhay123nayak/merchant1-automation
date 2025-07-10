@@ -82,8 +82,7 @@ Merchant1Automation/
 1. **Clone the Project:**
 
    ```bash
-   git clone https://github.com/your-repo/Merchant1Automation.git
-
+     https://github.com/abhay123nayak/merchant1-automation
 ## 🚀 Run project
 
 - mvn clean install
