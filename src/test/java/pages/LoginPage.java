@@ -10,7 +10,7 @@ public class LoginPage {
 
     private WebDriver driver;
 
-    @FindBy(xpath = "//input[@id='fullName']")
+    @FindBy(xpath = "//input[@placeholder='Enter Your Username']")
     private WebElement usernameInput;
 
     @FindBy(xpath = "//input[@id='Password']")
