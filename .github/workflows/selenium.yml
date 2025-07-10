@@ -1,4 +1,4 @@
-name: Selenium Tests CI on Windows
+name: Selenium Tests CI (Windows)
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
 
 jobs:
   build:
+
     runs-on: windows-latest
 
     steps:
@@ -19,21 +20,16 @@ jobs:
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-          distribution: 'adopt'
           java-version: '17'
+          distribution: 'adopt'
 
-      # Step 3: Set up Chrome Browser (already installed on Windows runners)
-
+      # Step 3: Check Chrome Version on Windows
       - name: Check Chrome version
-        run: chrome --version
+        run: |
+          & "${env:ProgramFiles}\Google\Chrome\Application\chrome.exe" --version
+        shell: pwsh
 
-      # Step 4: Set up ChromeDriver (matches Chrome version automatically)
-      - name: Setup ChromeDriver
-        uses: nanasess/setup-chromedriver@v2
-        with:
-          version: latest
-
-      # Step 5: Cache Maven dependencies
+      # Step 4: Cache Maven dependencies
       - name: Cache Maven repository
         uses: actions/cache@v4
         with:
@@ -42,15 +38,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven
 
-      # Step 6: Run Selenium Tests
-      - name: Run Maven Selenium Tests
+      # Step 5: Run Selenium Tests with Maven
+      - name: Run Selenium Maven Tests
         run: mvn clean install
 
-      # Step 7: Upload Extent Report
+      # Step 6: Upload Extent HTML Report
       - name: Upload Extent HTML Report
         uses: actions/upload-artifact@v4
         with:
           name: Selenium-ExtentReport
           path: |
-            reports/
             test-output/
