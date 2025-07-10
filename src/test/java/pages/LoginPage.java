@@ -49,6 +49,7 @@ public class LoginPage {
 
     // Wait for login page elements (already used in first test)
     public void waitForLoginElements() {
+        sleep(2);
         TestUtils.isVisible(driver, usernameInput);
         TestUtils.isVisible(driver, passwordInput);
         TestUtils.isVisible(driver, loginButton);
@@ -64,11 +65,13 @@ public class LoginPage {
     // Enter password
     public void enterPassword(String password) {
         passwordInput.clear();
+        sleep(2);
         passwordInput.sendKeys(password);
     }
 
     // Click Login button
     public void clickLogin() {
+        sleep(2);
         loginButton.click();
     }
 
@@ -96,6 +99,7 @@ public class LoginPage {
     }
 
     public void clickSendButton() {
+        sleep(2);
         sendButton.click();
     }
 
