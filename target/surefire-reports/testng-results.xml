@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-10T14:46:05 IST" name="My Test Suite" finished-at="2025-07-10T14:46:45 IST" duration-ms="39612">
+    <groups>
+    </groups>
+    <test started-at="2025-07-10T14:46:05 IST" name="Login Tests" finished-at="2025-07-10T14:46:45 IST" duration-ms="39612">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="setUpReport()[pri:0, instance:tests.LoginTest@7ec7ffd3]" started-at="2025-07-10T14:46:05 IST" name="setUpReport" finished-at="2025-07-10T14:46:05 IST" duration-ms="208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpReport -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@7ec7ffd3]" started-at="2025-07-10T14:46:05 IST" name="setUp" finished-at="2025-07-10T14:46:11 IST" duration-ms="5545" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testForgotPasswordFeatureValidation()[pri:0, instance:tests.LoginTest@7ec7ffd3]" started-at="2025-07-10T14:46:11 IST" name="testForgotPasswordFeatureValidation" finished-at="2025-07-10T14:46:19 IST" duration-ms="8388" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testForgotPasswordFeatureValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7ec7ffd3]" started-at="2025-07-10T14:46:19 IST" name="tearDown" finished-at="2025-07-10T14:46:20 IST" duration-ms="328" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@7ec7ffd3]" started-at="2025-07-10T14:46:20 IST" name="setUp" finished-at="2025-07-10T14:46:24 IST" duration-ms="4010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInstagramRedirect()[pri:0, instance:tests.LoginTest@7ec7ffd3]" started-at="2025-07-10T14:46:24 IST" name="testInstagramRedirect" finished-at="2025-07-10T14:46:34 IST" duration-ms="9920" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInstagramRedirect -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7ec7ffd3]" started-at="2025-07-10T14:46:34 IST" name="tearDown" finished-at="2025-07-10T14:46:34 IST" duration-ms="259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@7ec7ffd3]" started-at="2025-07-10T14:46:34 IST" name="setUp" finished-at="2025-07-10T14:46:38 IST" duration-ms="3921" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidLoginValidation()[pri:0, instance:tests.LoginTest@7ec7ffd3]" started-at="2025-07-10T14:46:38 IST" name="testInvalidLoginValidation" finished-at="2025-07-10T14:46:41 IST" duration-ms="3019" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidLoginValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7ec7ffd3]" started-at="2025-07-10T14:46:41 IST" name="tearDown" finished-at="2025-07-10T14:46:41 IST" duration-ms="239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@7ec7ffd3]" started-at="2025-07-10T14:46:41 IST" name="setUp" finished-at="2025-07-10T14:46:45 IST" duration-ms="3606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLoginPageLoadPerformance()[pri:0, instance:tests.LoginTest@7ec7ffd3]" started-at="2025-07-10T14:46:45 IST" name="testLoginPageLoadPerformance" finished-at="2025-07-10T14:46:45 IST" duration-ms="162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginPageLoadPerformance -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7ec7ffd3]" started-at="2025-07-10T14:46:45 IST" name="tearDown" finished-at="2025-07-10T14:46:45 IST" duration-ms="169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownReport()[pri:0, instance:tests.LoginTest@7ec7ffd3]" started-at="2025-07-10T14:46:45 IST" name="tearDownReport" finished-at="2025-07-10T14:46:45 IST" duration-ms="285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownReport -->
+      </class> <!-- tests.LoginTest -->
+    </test> <!-- Login Tests -->
+  </suite> <!-- My Test Suite -->
+</testng-results>
