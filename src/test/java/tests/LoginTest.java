@@ -100,7 +100,7 @@ public class LoginTest extends BaseTest {
             test.log(Status.INFO, "Redirected to: " + url);
 
             if (url.contains("instagram.com")) {
-                test.pass("Redirected to Instagram successfully.");
+                test.pass("Redirected to Instagram successfully");
             } else {
                 test.fail("Not redirected to Instagram.");
             }
