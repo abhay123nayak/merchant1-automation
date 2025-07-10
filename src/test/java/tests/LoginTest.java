@@ -9,7 +9,7 @@ import pages.LoginPage;
 public class LoginTest extends BaseTest {
 
     @Test
-    public void testLoginPageLoadPerformance() {
+    public void testLoginPageLoadPerformance() throws InterruptedException {
         test = extent.createTest("Test Case 1: Page Load Performance");
 
         LoginPage loginPage = new LoginPage(driver);
@@ -32,7 +32,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void testInvalidLoginValidation() {
+    public void testInvalidLoginValidation() throws InterruptedException {
         test = extent.createTest("Test Case 2: Invalid Login Validation");
 
 
@@ -55,7 +55,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void testForgotPasswordFeatureValidation() {
+    public void testForgotPasswordFeatureValidation() throws InterruptedException {
         test = extent.createTest("Test Case 3: Forgot Password Flow");
 
 
@@ -80,7 +80,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void testInstagramRedirect() {
+    public void testInstagramRedirect() throws InterruptedException {
         test = extent.createTest("Test Case 4: Instagram Redirect");
 
 
