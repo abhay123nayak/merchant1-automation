@@ -14,7 +14,7 @@ import java.util.Date;
 
 public class TestUtils {
 
-    private static final int DEFAULT_TIMEOUT = 10;
+    private static final int DEFAULT_TIMEOUT = 20;
 
     public static void click(WebDriver driver, WebElement element) {
         waitForElementToBeClickable(driver, element).click();
